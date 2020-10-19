@@ -1,9 +1,3 @@
-<style>
-    #javascript { color : #ffc048; }
-    img[alt$='js'] { width : 60px; float : left; margin-right : 10px }
-</style>
-![js_logo alt js](/assets/javascript.png)
-
 ## JavaScript
 ---
 ### 1. An Introduction
