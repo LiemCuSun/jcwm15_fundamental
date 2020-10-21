@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Market v1</title>
+    </head>
+    <body></body>
+    <script>
+        // define harga produk
+        let hargaApple = 10000
+        let hargaOrange = 15000
+        let hargaGrape = 20000
+
+        // define variable untuk menampung input dari user
+        let totalApple = prompt("Masukan total apple 🍏 yang ingin anda beli!")
+        let totalOrange = prompt("Masukan total orange 🍊 yang ingin anda beli!")
+        let totalGrape = prompt("Masukan total grape 🍇 yang ingin anda beli!")
+
+        // calculate total
+        let totalBeliApple = totalApple * hargaApple
+        let totalBeliOrange = totalOrange * hargaOrange
+        let totalBeliGrape = totalGrape * hargaGrape
+
+        // tampilkan output : detail belanja
+        alert(`
+            Detail belanja
+            Total apple 🍏 : ${totalApple} buah x ${hargaApple} = ${totalBeliApple}
+            Total orange 🍊 : ${totalOrange} buah x ${hargaOrange} = ${totalBeliOrange}
+            Total grape 🍇 : ${totalGrape} buah x ${hargaGrape} = ${totalBeliGrape}
+            Total Belanja : ${totalBeliApple + totalBeliOrange + totalBeliGrape}
+        `)
+    </script>
+</html>

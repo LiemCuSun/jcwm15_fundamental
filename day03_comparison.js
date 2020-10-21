@@ -22,3 +22,12 @@ console.log(1 == true) // true
 console.log(19 == "19") // true
 
 // NOTE : perbandingan itu mengutamakan value dibanding tipe data
+
+// STRICT EQUALITY (== vs ===)
+// == digunakan untuk membandingkan 2 tipe data yang berbeda
+console.log(0 == false) // true
+console.log("1" == 1) // true
+
+// === untuk membandingkan data dengan tipe yang sama
+console.log(0 === false) // false
+console.log("1" === 1) // false
