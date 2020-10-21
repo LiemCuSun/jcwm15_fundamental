@@ -1,13 +1,6 @@
 ## OUTLINE
-- how to run javascript ?
-    - inside browser : include javascript inside HTML
-        - <script></script>
-        - external file : <script src="[nama-file].js"></script>
-    - outside browser : nodejs => node [nama-file].js
-- output of javascript
-    - console browser / console terminal
-    - alert windows browser
-- javascript code stucture
-- varible : var, let, const
-- basic html interaction : input, output, confirmation (NOTE : inside browser)
-- data types
+- data types : Boolean, null and undifined, type conversion
+- operator : arithmatic operator (operasi matematika), unary operator
+- MATH & DATE OBJECT
+- comparison operator
+- if ... else ... (conditional statement)
