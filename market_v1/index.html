@@ -13,9 +13,14 @@
         let hargaGrape = 20000
 
         // define variable untuk menampung input dari user
-        let totalApple = prompt("Masukan total apple 🍏 yang ingin anda beli!")
-        let totalOrange = prompt("Masukan total orange 🍊 yang ingin anda beli!")
-        let totalGrape = prompt("Masukan total grape 🍇 yang ingin anda beli!")
+        // NOTE : prompt akan menghasilkan value dengan tipe data string
+        // prompt kalau misalkan kosong / tidak diisi value = null
+        let totalApple = parseInt(prompt("Masukan total apple 🍏 yang ingin anda beli!"))
+        let totalOrange = parseInt(prompt("Masukan total orange 🍊 yang ingin anda beli!"))
+        let totalGrape = parseInt(prompt("Masukan total grape 🍇 yang ingin anda beli!"))
+        console.log(typeof totalApple)
+        console.log(typeof totalOrange)
+        console.log(typeof totalGrape)
 
         // calculate total
         let totalBeliApple = totalApple * hargaApple
