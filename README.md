@@ -3,11 +3,11 @@
     - if...else...
     - swicth...case
     - logic operator
-    - loop
-      - while 
-      - do...while
-      - for(...)
-      - infinite loop
-      - break and continue
-      - nested loop : loop inside loop
-      - for loop => drawing pattern
+- loop
+  - while 
+  - do...while
+  - for(...)
+  - infinite loop
+  - break and continue
+  - nested loop : loop inside loop
+  - for loop => drawing pattern
