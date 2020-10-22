@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Market v1</title>
+        <title>Market v1.1</title>
     </head>
     <body></body>
     <script>
@@ -18,14 +18,12 @@
         let totalApple = parseInt(prompt("Masukan total apple 🍏 yang ingin anda beli!"))
         let totalOrange = parseInt(prompt("Masukan total orange 🍊 yang ingin anda beli!"))
         let totalGrape = parseInt(prompt("Masukan total grape 🍇 yang ingin anda beli!"))
-        console.log(typeof totalApple)
-        console.log(typeof totalOrange)
-        console.log(typeof totalGrape)
 
         // calculate total
         let totalBeliApple = totalApple * hargaApple
         let totalBeliOrange = totalOrange * hargaOrange
         let totalBeliGrape = totalGrape * hargaGrape
+        let totalBelanja = totalBeliApple + totalBeliOrange + totalBeliGrape
 
         // tampilkan output : detail belanja
         alert(`
@@ -33,7 +31,7 @@
             Total apple 🍏 : ${totalApple} buah x ${hargaApple} = ${totalBeliApple}
             Total orange 🍊 : ${totalOrange} buah x ${hargaOrange} = ${totalBeliOrange}
             Total grape 🍇 : ${totalGrape} buah x ${hargaGrape} = ${totalBeliGrape}
-            Total Belanja : ${totalBeliApple + totalBeliOrange + totalBeliGrape}
+            Total Belanja : ${totalBelanja}
         `)
     </script>
 </html>
