@@ -1,6 +1,13 @@
 ## OUTLINE
-- data types : Boolean, null and undifined, type conversion
-- operator : arithmatic operator (operasi matematika), unary operator
-- MATH & DATE OBJECT
-- comparison operator
-- if ... else ... (conditional statement)
+- next conditional statement 
+    - if...else...
+    - swicth...case
+    - logic operator
+    - loop
+      - while 
+      - do...while
+      - for(...)
+      - infinite loop
+      - break and continue
+      - nested loop : loop inside loop
+      - for loop => drawing pattern
