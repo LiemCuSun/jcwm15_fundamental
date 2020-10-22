@@ -1,8 +1,8 @@
 ## OUTLINE
 - next conditional statement 
-    - if...else...
-    - swicth...case
-    - logic operator
+  - if...else...
+  - swicth...case
+  - logic operator
 - loop
   - while 
   - do...while
