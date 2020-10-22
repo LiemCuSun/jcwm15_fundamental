@@ -26,7 +26,8 @@ console.log(`Hari ini tanggal ${tanggal}-${bulanIni}-${tahunIni}`)
 console.log(`Besok tanggal ${tanggal+1}-${bulanIni}-${tahunIni}`)
 console.log(`Kemaren tanggal ${tanggal-1}-${bulanIni}-${tahunIni}`)
 
-// MATH OBJECT => MATH.RANDOM() => generate random number between 0 and 1
+// MATH OBJECT => MATH.RANDOM() => generate random number between 0 and 1 (0.01, 0.9, 0.6, )
+// tidak termasuk 1
 // REF : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
 console.log(Math.random())
 
@@ -37,3 +38,6 @@ console.log(Math.floor(Math.random() * max))
 
 // random = 0.5 => 0.5 * 5 = 2.5 => 2
 // 0.9 * 5 => 4.5 => 4
+
+let floatNumber = Math.random()
+console.log(floatNumber.toPrecision(2))
