@@ -1,0 +1,6 @@
+tugas market :
+- setelah alert detail belanja => minta input pembayaran
+- check input pembayaran
+- total belanja 10rb => input pembayaran > 10rb
+- kalau ada sisa => tampilkan sisa pembayaran
+- kurangi stok sebelum minta konfirmasi belanja lagi
