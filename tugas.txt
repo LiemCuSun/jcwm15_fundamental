@@ -4,3 +4,5 @@ tugas market :
 - total belanja 10rb => input pembayaran > 10rb
 - kalau ada sisa => tampilkan sisa pembayaran
 - kurangi stok sebelum minta konfirmasi belanja lagi
+- tampilkan menu belanja berupa produk, stock dan harganya
+    - 1. apple , stock = 10, harga = Rp. 15.000,00 / kg
