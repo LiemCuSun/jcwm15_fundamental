@@ -1,13 +1,7 @@
 ## OUTLINE
-- next conditional statement 
-  - if...else...
-  - swicth...case
-  - logic operator
-- loop
-  - while 
-  - do...while
-  - for(...)
-  - infinite loop
-  - break and continue
-  - nested loop : loop inside loop
-  - for loop => drawing pattern
+- loop part 2
+  - case or example : pattern
+  - label for loop
+  - debug
+- Array
+  - introduction to array
