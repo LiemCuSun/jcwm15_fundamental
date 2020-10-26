@@ -14,7 +14,7 @@ Now, try to `console.log()` in your browser console by typing `console.log('your
 
 ![js_console](/assets/js_console.jpg)
 
-Each brower has different engine to run javascript program, for example chrome used what its called `v8engine` and firefox use `SpiderMonkey`.
+Each browser has different engine to run javascript program, for example chrome used what its called `v8engine` and firefox use `SpiderMonkey`.
 
 > NOTE : back in the day where website in its just a static page, mean that its only serve or display a static web page content.
 
