@@ -22,7 +22,7 @@
 |   6   | Loops | - intro loop <br> - while <br> - do ... while <br> - for ... <br> - break and continue <br> - nested loop <br> - label for loop |
 |   6.1 | Debugging  | - debug using vscode and nodejs |
 |   7   | Array | - used for collection data not single data <br> - declare array <br> - index of array <br> - access, insert, update, delete element inside array <br> - array methods |
-|   8   | Function | <br> - declare a function <br> - function name rule <br> - anonymous function <br> - function with parameter <br> - default value <br> - return value |
+|   8   | Function | - declare a function <br> - function name rule <br> - anonymous function <br> - function with parameter <br> - default value <br> - return value |
 |   9   | Introduction to OOP | - delcare an object <br> - object key and value <br> - method <br> - create object using class <br> - loop inside object <br> - object method   |
 |   10  | ECMA Script   | - ternary operator <br> - arrow function <br> - array and object destructuring <br> - spread operator (...)   |
 
