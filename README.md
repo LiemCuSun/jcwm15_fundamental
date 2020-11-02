@@ -7,4 +7,3 @@
     - inheritance
     - data collection and loop inside object or data collection
 - create object using function => constructor function
-- 
