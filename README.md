@@ -6,7 +6,5 @@
     - create object using class
     - inheritance
     - data collection and loop inside object or data collection
-- ECMASCRIPT :
-    - arrow function
-    - ternary operator
-    - high order function
+- create object using function => constructor function
+- 
