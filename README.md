@@ -1,12 +1,12 @@
 ## OUTLINE
-- Function
-    - intro : tujuan sama cara bikin fungsi
-    - invoke function
-    - fungsi dengan parameter / input
-    - local scope => function with return value
-    - functional expression & anonymous function
-    - callback function
-    - hoisting
-    - function that return a function
-- Object
-    - introduction to javascript object
+- OBJECT
+    - what's object in javascript ?
+    - CRUD di object
+    - props & method
+    - create object using class
+    - inheritance
+    - data collection and loop inside object or data collection
+- ECMASCRIPT :
+    - arrow function
+    - ternary operator
+    - high order function
