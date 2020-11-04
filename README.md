@@ -1,13 +1,7 @@
 ## OUTLINE
-- ECMA Script
-    - ternary operator
-    - arrow function
-    - spread operator
-    - high order function
-    - object destructuring
-- setTimeOut and setInterval
-- HTML
-    - basic element
-- CSS
-    - query selector
-    - simple styling
+- DOM (Document Object Model)
+    - DOM Structure & Tree
+    - access DOM element/nodes
+    - Navigate => Nodes or Element
+    - seraching element
+- Modified DOM => structure, content, & style
