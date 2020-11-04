@@ -127,6 +127,33 @@
             } else if (pilih === 2) {
                 ShowProducts()
             } else if (pilih === 3) {
+                // edit product
+                // tampitlakn semua product
+                let menuEdit = "Pilihlah product yang ingin anda edit! \n"
+                for (let i = 0; i < products.length; i++) {
+                    menuEdit += `${i + 1}. ${products[i].nama} Rp ${products[i].harga},00 /kg, stock = ${products[i].stock} \n`
+                }
+
+                let productIdx = parseInt(prompt(menuEdit))
+
+                if (isNaN(productIdx) || productIdx <= 0 || productIdx > products.length) {
+                    alert("⚠ Wrong input!")
+                }
+
+                // ask input to edit product
+                let namaBaru = prompt("Masukan nama product yang baru :", products[productIdx-1].nama)
+                let hargaBaru = prompt("Masukan harga baru : ", products[productIdx - 1].harga)
+                let stockBaru = prompt("Masukan total stock yang baru : ", products[productIdx-1].stock)
+
+                console.log(namaBaru, hargaBaru, stockBaru)
+
+                // update products
+                products[productIdx - 1].nama = namaBaru
+                products[productIdx - 1].harga = hargaBaru
+                products[productIdx - 1].stock = stockBaru
+
+                alert("Update success 🤪.")
+            } else if (pilih === 4) {
                 main : while(true) {
                     // show all products
                     ShowProducts()
@@ -172,7 +199,7 @@
                         break main
                     }
                 }
-            } else if (pilih === 4) {
+            } else if (pilih === 5) {
                 break home
             }
         }
