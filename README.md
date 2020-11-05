@@ -3,5 +3,5 @@
     - DOM Structure & Tree
     - access DOM element/nodes
     - Navigate => Nodes or Element
-    - seraching element
+    - searching element
 - Modified DOM => structure, content, & style
