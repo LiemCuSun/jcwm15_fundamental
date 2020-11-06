@@ -1,3 +1,3 @@
 ## OUTLINE
 - get input from different input type
-- show list data
+- show list data & CRUD
