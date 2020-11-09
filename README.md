@@ -1,3 +1,4 @@
 ## OUTLINE
-- get input from different input type
-- show list data & CRUD
+- show data table
+- CRUD operation => Create, Read, Update & Delete
+- input validation
