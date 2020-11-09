@@ -42,6 +42,22 @@
             </thead>
             <tbody></tbody>
         </table>
+
+        <h1>User Cart</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Produk</th>
+                    <th>Image</th>
+                    <th>Harga</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
     </body>
     <script>
         // create database
@@ -133,6 +149,7 @@
                             <td>
                                 <button onclick="OnButtonDelete(${i})">DELETE</button>
                                 <button onclick="OnButtonEdit(${i})">EDIT</button>
+                                <button>ADD TO CART</button>
                             </td>
                         </tr>
                     ` 
@@ -245,5 +262,9 @@
             // tampilkan ulang table produk
             ShowProducts()
         }
+
+        // TUGAS :
+        // kalau misalkan button add to cart di klik
+        // tampilkan table user cart
     </script>
 </html>
