@@ -44,7 +44,7 @@ function ShowProducts (idx) {
                     <td>
                         <button onclick="OnButtonDelete(${i})">DELETE</button>
                         <button onclick="OnButtonEdit(${i})">EDIT</button>
-                        <button onclick="OnButtonAddToCart(${i})">ADD TO CART</button>
+                        <button class="add-to-cart" onclick="OnButtonAddToCart(${i})">ADD TO CART</button>
                     </td>
                 </tr>
             ` 
@@ -102,10 +102,6 @@ function OnButtonAdd (e) {
 
 }
 
-// delete produk
-// dataProduk.splice(2, 1)
-// console.log(dataProduk)
-
 // ShowProducts()
 function OnButtonDelete (index) {
     console.log(`button index ke-${index} di klik`)
@@ -158,101 +154,28 @@ function OnButtonCancel () {
     ShowProducts()
 }
 
-// add to cart
-function OnButtonAddToCart (index) {
-    // console.log(`button ke-${index} add to cart di klik`)
-    console.log("data yang mau dimasukan", dataProduk[index].name)
-    let produk = {...dataProduk[index]} 
-    // saya mau copy semua properties dari dataProduk[index]
-    console.log(produk)
-    let cartIndex // variable ini akan dipakai untuk menampung index dari data produk yang sudah ada di cart
+// add fitur sorting
+function OnButtonSort () {
+    console.log("button sort di klik")
 
-    // cari data produk yang sama di user cart
-    for (let i = 0; i < userCart.length; i++) {
-        if (userCart[i].name === produk.name) {
-            cartIndex = i
+    // get value dari option
+    // let option = "harga"
+
+    // sorting data
+    // method .sort() akan jalan untuk array yang isinya number
+
+    // callback function, untuk sorting by harga
+    function sorting (a, b) {
+        if (a.harga > b.harga) {
+            return 1
         }
+        if (a.harga < b.harga) {
+            return -1
+        }
+        return 0
     }
+    dataProduk.sort(sorting)
 
-    // add produk ke cart
-    if (cartIndex !== undefined) {
-        userCart[cartIndex].quantity += 1
-    } else {
-        userCart.push(
-            new ProdukCart (
-                userCart.length + 1,
-                dataProduk[index].name, 
-                dataProduk[index].img, 
-                dataProduk[index].harga,
-                1
-            )
-        )
-    }
-
-    console.log("cart setelah di add", userCart)
-
-    // tampilkan data userCart di HTML
-    ShowUserCart()
-}
-
-// show user cart
-function ShowUserCart () {
-    // get access table body
-    let table = document.getElementById("user-cart")
-    let tbody = table.getElementsByTagName("tbody")[0]
-    // console.log(table)
-    // console.log(tbody)
-
-    // tambahkan baris baru sesuai banyaknya produk di userCart
-    let tr = ""
-    for (let i = 0; i < userCart.length; i++) {
-        tr += `
-            <tr>
-                <td>${i + 1}</td>
-                <td>${userCart[i].name}</td>
-                <td>
-                    <img src="${userCart[i].img}" height="60px">
-                </td>
-                <td>${userCart[i].harga}</td>
-                <td>${userCart[i].quantity}</td>
-                <td>${userCart[i].total()}</td>
-                <td>
-                    <button onclick="OnButtonDeleteCart(${i})">DELETE</button>
-                </td>
-            </tr>
-        `
-    }
-
-    // tambahkan ke tbody
-    tbody.innerHTML = tr
-}
-
-// delete produk di cart
-function OnButtonDeleteCart (index) {
-    console.log(`button ke-${index} delete cart di klik`)
-
-    // delete produk yang ada id cart
-    userCart.splice(index, 1)
-
-    // tampilkan ulang cart
-    ShowUserCart()
-}
-
-// cetak receipt
-function OnButtonCetak () {
-    console.log("button cetak di klik")
-    let receipt = document.getElementById("receipt")
-
-    // cetak receipt
-    let output = "Receipt : <br>"
-    let total = 0
-    for(let i = 0; i < userCart.length; i++) {
-        output += `${i + 1}. ${userCart[i].name} x ${userCart[i].quantity} = ${userCart[i].total()} <br>`
-        total += userCart[i].total()
-    }
-
-    output += `<br> Total belanja : Rp ${total},00`
-
-    // tampilkan di HTML
-    receipt.innerHTML = output
+    // tampilan ulang produk
+    ShowProducts()
 }
