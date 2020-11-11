@@ -60,16 +60,21 @@ function OnButtonCheckOut () {
         alert("Masukan jumlah uang yang mau di bayarkan.")
     } else if (kembalian > 0) {
         alert(`Terima kasih sudah berbelanja \n uang kembalian : Rp ${kembalian},00 .`)
+        reset()
     } else {
         alert("Terima kasih sudah berbelanja.")
+        reset()
     }
 
     // setelah prosess checkout, reset semua kondisi
     uang.value = ""
-    // userCart = []
-    // button di reset
+}
+
+// reset
+function reset () {
+    // kosongkan cart
     userCart = []
-    
+
     // reset button delete and add to cart
     let btnDelete = document.body.getElementsByClassName("delete-cart") // HTML collection
     let btnAddToCart = document.body.getElementsByClassName("add-to-cart") // HTML Collection
@@ -78,16 +83,16 @@ function OnButtonCheckOut () {
     for (let item of btnDelete) {
         item.disabled = false
     }
-
+    
     for (let item of btnAddToCart) {
         // console.log(item)
         item.disabled = false
     }
-
+    
     // hapus receipt
     let receipt = document.getElementById("receipt")
     receipt.textContent = `Receipt :`
-
+    
     // hide checkout
     let checkout = document.getElementById("checkout")
     uang.hidden = true
