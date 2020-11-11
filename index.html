@@ -18,21 +18,32 @@
             }
             body {
                 background-color: #f5f5f5;
+                padding: 2% 10%;
             }
 
             button {
                 padding: 2px 5px;
             }
+
+            thead {
+                background-color: antiquewhite;
+            }
+
+            input, select {
+                padding: 2px 5px;
+            }
+            
+
         </style>
     </head>
     <body>
-        <center>
+        <!-- <center> -->
             <h1>Form Produk Baru</h1>
             <form id="produk-baru">
                 <input type="text" id="nama" placeholder="nama produk">
-                <input type="text" id="img" placeholder="image">
+                <input type="text" id="img" placeholder="image"> <br><br>
                 <input type="number" id="harga" placeholder="harga">
-                <input type="number" id="stok" placeholder="stok">
+                <input type="number" id="stok" placeholder="stok"><br><br>
                 <button onclick="OnButtonAdd(event)">ADD</button>
             </form>
 
@@ -43,7 +54,12 @@
                 <option>DESC</option>
             </select>
             <button onclick="OnButtonSort()">SORT</button>
-            
+            <br>
+            <br>
+            <input type="search" placeholder="serach by name">
+            <button>SEARCH</button>
+            <br>
+
             <h1>Daftar Produk</h1>
             <table id="daftar-produk">
                 <thead>
@@ -82,7 +98,7 @@
     
             <input type="number" placeholder="total uang yang di bayarkan" id="uang" hidden>
             <button onclick="OnButtonCheckOut()" id="checkout" hidden>CHEKOUT</button>
-        </center>
+        <!-- </center> -->
     </body>
     <script src="/database.js"></script>
     <script src="/produk.js"></script>
