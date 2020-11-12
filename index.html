@@ -49,15 +49,15 @@
 
             <h1>Filter</h1>
             Sort by Harga
-            <select>
-                <option>ASC</option>
-                <option>DESC</option>
+            <select id="selection">
+                <option value="ASC">ASC</option>
+                <option value="DESC">DESC</option>
             </select>
             <button onclick="OnButtonSort()">SORT</button>
             <br>
             <br>
-            <input type="search" placeholder="serach by name">
-            <button>SEARCH</button>
+            <input type="search" placeholder="serach by name" id="search">
+            <button onclick="OnButtonSearch()">SEARCH</button>
             <br>
 
             <h1>Daftar Produk</h1>
@@ -72,7 +72,7 @@
                         <th>Action</th>
                     </tr>
                 </thead>
-                <tbody></tbody>
+                <tbody id="tbody-produk"></tbody>
             </table>
     
             <h1>User Cart</h1>

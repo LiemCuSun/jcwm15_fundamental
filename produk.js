@@ -158,24 +158,107 @@ function OnButtonCancel () {
 function OnButtonSort () {
     console.log("button sort di klik")
 
-    // get value dari option
-    // let option = "harga"
-
-    // sorting data
-    // method .sort() akan jalan untuk array yang isinya number
+    // get value dari <select> option
+    let select = document.getElementById("selection")
+    console.log(select)
+    console.log(select.value)
 
     // callback function, untuk sorting by harga
+    // function sortingAsc (a, b) {
+    //     if (a.harga > b.harga) {
+    //         return 1
+    //     }
+    //     if (a.harga < b.harga) {
+    //         return -1
+    //     }
+    //     return 0
+    // }
+
+    // function sortingDesc (a, b) {
+    //     if (a.harga > b.harga) {
+    //         return -1
+    //     }
+    //     if (a.harga < b.harga) {
+    //         return 1
+    //     }
+    //     return 0
+    // }
+
+    // custom callback function
     function sorting (a, b) {
         if (a.harga > b.harga) {
-            return 1
+            return select.value === 'ASC' ? 1 : -1
         }
         if (a.harga < b.harga) {
-            return -1
+            return select.value === 'ASC' ? -1 : 1
         }
         return 0
     }
+
+    // sorting data
+    // if (select.value === 'ASC') {
+    //     dataProduk.sort(sortingAsc)
+    // } else {
+    //     dataProduk.sort(sortingDesc)
+    // }
+
     dataProduk.sort(sorting)
 
     // tampilan ulang produk
     ShowProducts()
+}
+
+
+// feature search
+function OnButtonSearch () {
+    console.log("button search di klik")
+
+    // kita get value dari input type="search"
+    let namaProdukYgDicari = document.getElementById("search").value
+    console.log(name)
+    
+    // pakai RegEXP => saat user cari kata iphone => sudah ada produk dengan kata iphone 
+    let reg = new RegExp(`${namaProdukYgDicari}`, 'gi')
+    console.log(reg)
+
+    // test regex => di nama produk index ke-0
+    // console.log(reg.test(dataProduk[0].name)) // "iPhone 12"
+
+    // search name in database
+    let result = []
+    for (let i = 0; i < dataProduk.length; i++) {
+        // if (dataProduk[i].name.toLowerCase() === namaProdukYgDicari.toLowerCase()) {
+        //     result.push(dataProduk[i])
+        // }
+
+        // use regex
+        console.log(dataProduk[i].name)
+        let regResult = reg.test(dataProduk[i].name)
+        console.log(regResult)
+        if (regResult) {
+            result.push(dataProduk[i])
+        }
+        
+    }
+    console.log(result)
+
+    // tampilkan hasilnya
+    let tbody = document.getElementById("tbody-produk")
+    let baris = ""
+    for (let i = 0; i < result.length; i++) {
+        baris += `
+            <tr>
+                <td>${i + 1}</td>
+                <td>${result[i].name}</td>
+                <td>
+                    <img src="${result[i].img}" height="60px">
+                </td>
+                <td>${result[i].harga}</td>
+                <td>${result[i].stok}</td>
+                <td></td>
+            </tr>
+        `
+    }
+
+    tbody.innerHTML = baris
 }
